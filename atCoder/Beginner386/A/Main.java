@@ -1,4 +1,4 @@
-package atCoder.Beginner386;
+package atCoder.Beginner386.A;
 import java.util.Scanner;
 
 public class Main {
@@ -10,6 +10,7 @@ public class Main {
 		int b = sc.nextInt();
 		int c = sc.nextInt();
 		int d = sc.nextInt();
+		sc.close();
 
 		// それぞれの値を配列に入れてチェックする。
 		int[] cards = {a,b,c,d};
