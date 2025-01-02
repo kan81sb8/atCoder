@@ -12,6 +12,7 @@ public class Main {
 		int c = sc.nextInt();
 		// 文字列の入力
 		String s = sc.next();
+		sc.close();
 		// 出力
 		System.out.println((a+b+c) + " " + s);
     }
