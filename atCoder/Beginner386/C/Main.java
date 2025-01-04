@@ -37,12 +37,15 @@ public class Main {
 	 */
 	private static String equalsCheck(String[] sWords,String[] tWords) {
 		// 繰り返しの回数となる文字数を取得する。
-		int wordsLength = sWords.length;
+		int wordsLength = sWords.length - 1;
 		// 文字の違いをカウントする変数を初期化
 		int count = 0;
 		for(int i = 0; i <= wordsLength; i++) {
-			if(sWords[i].equals(tWords[i])) {
+			if (i == wordsLength && count == 0) {
 				break;
+			}
+			if(sWords[i].equals(tWords[i])) {
+				continue;
 			} else {
 				count++;
 			}
@@ -55,12 +58,15 @@ public class Main {
 
 	private static String sBiggerCheck(String[] sWords, String[] tWords) {
 		// 繰り返しの回数となる文字数を取得する。
-		int wordsLength = sWords.length;
+		int wordsLength = sWords.length - 1;
 		// 文字の違いをカウントする変数を初期化
 		int count = 0;
 		for(int i = 0; i <= wordsLength; i++) {
-			if (sWords[i].equals(tWords[i-count])) {
+			if (i == wordsLength && count == 0) {
 				break;
+			}
+			if (sWords[i].equals(tWords[i-count])) {
+				continue;
 			} else {
 				count++;
 			}
@@ -73,12 +79,15 @@ public class Main {
 
 	private static String sSmallerCheck(String[] sWords, String[] tWords) {
 		// 繰り返しの回数となる文字数を取得する。
-		int wordsLength = tWords.length;
+		int wordsLength = tWords.length - 1;
 		// 文字の違いをカウントする変数を初期化
 		int count = 0;
 		for(int i = 0; i <= wordsLength; i++) {
-			if (sWords[i-count].equals(tWords[i])) {
+			if (i == wordsLength && count == 0) {
 				break;
+			}
+			if (sWords[i-count].equals(tWords[i])) {
+				continue;
 			} else {
 				count++;
 			}
