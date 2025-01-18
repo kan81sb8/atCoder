@@ -1,4 +1,4 @@
-package atCoder.Beginner387.C;
+package atCoder.Beginner387.E;
 import java.util.Scanner;
 
 public class Main {
@@ -6,14 +6,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 		// 入力の数値を受け取る
-		int l = sc.nextInt();
-		int r = sc.nextInt();
+		int n = sc.nextInt();
 		sc.close();
 
-		// ヘビ数かを確認していく。
-		// (先頭の数字 - 1)^残りの桁数 がその桁のヘビ数の候補になる。
-		// 最大桁数の時だけ最大値を考慮すればすれば残りは計算で出せる。
-		// 渡された値のヘビ数を求める。 
+		// 桁和は＋１ずつされていき、10回に一度−８される
+		// それを割り切れるのか
 		int count = 0;
 		for(int i = l; i <= r; i++) {
 			// 桁数を取得する

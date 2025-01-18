@@ -10,13 +10,15 @@ public class Main {
 		sc.close();
 
 		// アルファベットを格納する配列を作ってしまう。
-		String[]  alphabet = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
+		// String[]  alphabet = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
 
 		// 受け取った数だけループして文字列を作成して出力する。
-		String ans = "";
+		// String ans;
+		char alphabet = 'A';
 		for (int i = 0; i < k; i++) {
-			ans = ans.concat(alphabet[i]);
+			System.out.println(String.valueOf(alphabet + i));
+			// ans = ans.concat(alphabet + i);
 		}
-		System.out.println(ans);
+		// System.out.println(ans);
     }
 }
