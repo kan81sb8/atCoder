@@ -8,10 +8,10 @@ public class Main {
 		int q = sc.nextInt();
 
 		// q個分の配列を用意する。
-		int[] snakeList = new int[q + 1];
+		long[] snakeList = new long[q + 1];
 		snakeList[0] = 0;
 		int deleteCount = 0;
-		int deleteLong = 0;
+		long deleteLong = 0;
 		int outCount = 0;
 		 
 		// for文で回して各サイズを入れる
@@ -24,7 +24,7 @@ public class Main {
 				deleteCount++;
 			} else if (type == 3) {
 				int target = sc.nextInt();
-				int ans = snakeList[target - 1 + deleteCount] - deleteLong;
+				long ans = snakeList[target - 1 + deleteCount] - deleteLong;
 				System.out.println(ans);
 				outCount++;
 			}
